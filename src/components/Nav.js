@@ -4,24 +4,25 @@ import { NavLink } from "react-router-dom";
 export const Nav = () => {
   return (
     <nav>
+      <svg className="menu-icon" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
       <menu className="primary-menu">
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/" className="menu">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about" className="menu">About</NavLink>
         </li>
         <li>
-          <NavLink to="/menu">Menu</NavLink>
+          <NavLink to="/menu" className="menu">Menu</NavLink>
         </li>
         <li>
-          <NavLink to="/reservation">Reservation</NavLink>
+          <NavLink to="/reservation" className="menu">Reservation</NavLink>
         </li>
         <li>
-          <NavLink to="/order-online">Order online</NavLink>
+          <NavLink to="/order-online" className="menu">Order online</NavLink>
         </li>
         <li>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/login" className="menu">Login</NavLink>
         </li>
       </menu>
     </nav>

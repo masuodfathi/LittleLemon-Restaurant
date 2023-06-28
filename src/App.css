@@ -1,6 +1,7 @@
 header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .logo{
   width: 230px;
@@ -10,6 +11,9 @@ header{
   list-style: none;
   padding: 0;
 }
+.menu-icon{
+  display: none;
+}
 .primary-menu li{
   padding: 15px;
 }
@@ -18,7 +22,6 @@ header{
   color: #111;
   transition: all 200ms ease-in;
   border-color: #fff;
-  
 }
 .primary-menu li a.active{
   color: #ab9112;
@@ -26,12 +29,27 @@ header{
   padding-bottom: 15px;
   border-bottom: 1px solid #ab9112;
 }
+
+.home{
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+.home article{
+  border: 1px solid #e6e6e6;
+  padding: 15px;
+  font-size: .6rem;
+  border-radius: 16px;
+  background-color: #EDEFEE;
+}
 footer{
   display: flex;
   justify-content: space-evenly;
   background-color: #495E57;
   color: #fff;
   padding: 66px 15px;
+  font-size: .7rem;
 }
 footer ul{
   list-style: none;
@@ -45,8 +63,67 @@ footer section h3{
 }
 footer ul a{
   text-decoration: none;
-  
-} 
+}
 footer ul a:visited{
   color: #fff;
+}
+h1{
+  font-size: 56px;
+  font-weight: 400;
+}
+h2{
+  font-size: 40px;
+  font-weight: 400;
+}
+h3{
+  font-size: 32px;
+  font-weight: 300;
+}
+h4{
+  font-size: 24px;
+  font-weight: 400;
+}
+.menu{
+  font-size: 20px;
+  font-weight: 400;
+}
+.footer-header{
+  font-size: 20px;
+  font-weight:900;
+}
+p{
+  font-size: 20px;
+  font-weight: 300;
+}
+.button{
+  font-size: 18px;
+  font-weight: 300;
+}
+.card-body{
+  font-size: 16px;
+  font-weight: 300;
+}
+img{
+  border-radius: 16px;
+}
+@media screen and (max-width: 992px) {
+  .menu-icon{
+    display: inline-block;
+  }
+  .profile{
+    display: none;
+  }
+  footer{
+    flex-direction: column;
+    align-items: start;
+  }
+  footer img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  .primary-menu{
+    display: none;
+  }
 }

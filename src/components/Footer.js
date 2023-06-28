@@ -7,42 +7,42 @@ export const Footer = () => {
     <footer>
       <img src={FooterLogo} alt="" />
       <section>
-        <h3>Doormate navigation</h3>
+        <h3 className="footer-header">Doormate navigation</h3>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" className="menu">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about" className="menu">About</NavLink>
           </li>
           <li>
-            <NavLink to="/Menu">Menu</NavLink>
+            <NavLink to="/Menu" className="menu">Menu</NavLink>
           </li>
           <li>
-            <NavLink to="/reservation">Reservation</NavLink>
+            <NavLink to="/reservation" className="menu">Reservation</NavLink>
           </li>
           <li>
-            <NavLink to="/order-online">Order online</NavLink>
+            <NavLink to="/order-online" className="menu">Order online</NavLink>
           </li>
           <li>
-            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/login" className="menu">Login</NavLink>
           </li>
         </ul>
       </section>
       <section>
-        <h3>Contact</h3>
+        <h3 className="footer-header">Contact</h3>
       <ul>
-        <li>Iran, Tehran, Chitgar Lake</li>
-        <li>+989125758186</li>
-        <li>Masuod.fathi@gmail.com</li>
+        <li className="menu">Iran, Tehran, Chitgar Lake</li>
+        <li className="menu">+989125758186</li>
+        <li className="menu">Masuod.fathi@gmail.com</li>
       </ul>
       </section>
       <section>
-        <h3>Social media</h3>
+        <h3 className="footer-header">Social media</h3>
       <ul>
-        <li>FaceBook</li>
-        <li>Instagram</li>
-        <li>Telegram</li>
+        <li className="menu">FaceBook</li>
+        <li className="menu">Instagram</li>
+        <li className="menu">Telegram</li>
       </ul>
       </section>
     </footer>
