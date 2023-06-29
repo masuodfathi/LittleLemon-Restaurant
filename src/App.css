@@ -1,129 +1,171 @@
-header{
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo{
+.logo {
   width: 230px;
 }
-.primary-menu{
+.primary-menu {
   display: flex;
   list-style: none;
   padding: 0;
 }
-.menu-icon{
+.menu-icon {
   display: none;
 }
-.primary-menu li{
+.primary-menu li {
   padding: 15px;
 }
-.primary-menu li a{
+.primary-menu li a {
   text-decoration: none;
   color: #111;
   transition: all 200ms ease-in;
   border-color: #fff;
 }
-.primary-menu li a.active{
+.primary-menu li a.active {
   color: #ab9112;
   text-shadow: 0 0 3px #ab9112;
   padding-bottom: 15px;
   border-bottom: 1px solid #ab9112;
 }
 
-.home{
+.home {
   padding: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 15px;
 }
-.home article{
+.home article {
   border: 1px solid #e6e6e6;
   padding: 15px;
-  font-size: .6rem;
+  font-size: 0.6rem;
   border-radius: 16px;
-  background-color: #EDEFEE;
+  background-color: #edefee;
 }
-footer{
+.home-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  background-color: #495e57;
+  padding: 30px;
+}
+.header-text {
+  width: 60%;
+}
+.header-text h1 {
+  color: #f4ce14;
+  margin-bottom: 0;
+}
+.header-text p {
+  color: #fff;
+}
+.header-text .location {
+  margin-top: 0;
+}
+.header-image{
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+}
+.header-image img {
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  top: 20%;
+}
+.button {
+  padding: 15px 35px;
+  background: #f4ce14;
+  text-decoration: none;
+  border-radius: 50px;
+  display: inline-block;
+  margin-top: 30px;
+}
+.button:visited{
+  color: #111;;
+}
+footer {
   display: flex;
   justify-content: space-evenly;
-  background-color: #495E57;
+  background-color: #495e57;
   color: #fff;
   padding: 66px 15px;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
-footer ul{
+footer ul {
   list-style: none;
   padding: 0;
 }
-footer ul li{
+footer ul li {
   padding: 10px 10px 10px 0;
 }
-footer section h3{
-  color: #F4CE14;
+footer section h3 {
+  color: #f4ce14;
 }
-footer ul a{
+footer ul a {
   text-decoration: none;
 }
-footer ul a:visited{
+footer ul a:visited {
   color: #fff;
 }
-h1{
+h1 {
   font-size: 56px;
   font-weight: 400;
 }
-h2{
+h2 {
   font-size: 40px;
   font-weight: 400;
 }
-h3{
+h3 {
   font-size: 32px;
   font-weight: 300;
 }
-h4{
+h4 {
   font-size: 24px;
   font-weight: 400;
 }
-.menu{
+.menu {
   font-size: 20px;
   font-weight: 400;
 }
-.footer-header{
+.footer-header {
   font-size: 20px;
-  font-weight:900;
+  font-weight: 900;
 }
-p{
+p {
   font-size: 20px;
   font-weight: 300;
 }
-.button{
+.button {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
-.card-body{
+.card-body {
   font-size: 16px;
   font-weight: 300;
 }
-img{
+img {
   border-radius: 16px;
 }
 @media screen and (max-width: 992px) {
-  .menu-icon{
+  .menu-icon {
     display: inline-block;
   }
-  .profile{
+  .profile {
     display: none;
   }
-  footer{
+  footer {
     flex-direction: column;
     align-items: start;
   }
-  footer img{
+  footer img {
     height: 150px;
     width: 100%;
     object-fit: cover;
     border-radius: 16px;
   }
-  .primary-menu{
+  .primary-menu {
     display: none;
   }
 }
