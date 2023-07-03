@@ -5,6 +5,7 @@ import Logo from "../../assets/Footerlogo.png";
 import { Button } from "../layout/Button";
 import { Specials } from "../sections/Specials";
 import { Testimonials } from "../sections/Testimonials";
+import { Description } from "../sections/Description";
 
 export const Home = ({ partOneTitle = "Special" }) => {
 
@@ -30,6 +31,7 @@ export const Home = ({ partOneTitle = "Special" }) => {
       </section>
       <Specials title={partOneTitle}/>
       <Testimonials />
+      <Description/>
       </>
   );
 };
