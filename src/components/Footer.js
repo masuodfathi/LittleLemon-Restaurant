@@ -5,7 +5,10 @@ import FooterLogo from "../assets/Footerlogo.png";
 export const Footer = () => {
   return (
     <footer>
-      <img src={FooterLogo} alt="" />
+      <section className="footer-section-image">
+        <img src={FooterLogo} alt="" />
+      </section>
+      
       <section>
         <h3 className="footer-header">Doormate navigation</h3>
         <ul>
