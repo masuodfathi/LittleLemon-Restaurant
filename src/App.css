@@ -51,7 +51,7 @@ header {
 .header-text .location {
   margin-top: 0;
 }
-.header-image{
+.header-image {
   max-width: 100%;
   width: 100%;
   text-align: center;
@@ -63,37 +63,35 @@ header {
   top: 20%;
 }
 
-.home-section-one{
-  background-color: #EDEFEE;
+.home-section-one {
+  background-color: #edefee;
   padding-top: 100px;
 }
-.home-section-one-title{
-  
+.home-section-one-title {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 }
-.home-section-one-title a{
-  margin: 33.200px 0;
+.home-section-one-title a {
+  margin: 33.2px 0;
 }
 
-.home-card-section{
+.home-card-section {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
   padding: 0 50px 50px;
-  
 }
-.home-card{
+.home-card {
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: #fafafa;
   border-radius: 35px;
 }
-.home-card img{
+.home-card img {
   width: 100%;
   height: 222px;
   max-height: 222px;
@@ -101,40 +99,41 @@ header {
   object-fit: cover;
   border-radius: 35px 35px 0 0;
 }
-.card-header{
+.card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 17px;
 }
-.card-header h4,.card-header p{
+.card-header h4,
+.card-header p {
   margin: 0;
 }
-.card-link{
+.card-link {
   padding: 17px;
 }
-.card-link h4{
+.card-link h4 {
   margin-top: 0;
 }
-.card-price{
+.card-price {
   font-size: 16px;
   font-weight: 700;
-  color: #FF7A00;
+  color: #ff7a00;
 }
 /*============= common parts =============*/
-.flex{
+.flex {
   display: flex;
 }
-.flex-col{
+.flex-col {
   flex-direction: column;
 }
-.justify-center{
+.justify-center {
   justify-content: center;
 }
-.align-center{
+.align-center {
   align-items: center;
 }
-.center{
+.center {
   text-align: center;
 }
 .button {
@@ -146,8 +145,8 @@ header {
   margin-top: 30px;
   color: #111;
 }
-.button:visited{
-  color: #111;;
+.button:visited {
+  color: #111;
 }
 h1 {
   font-size: 56px;
@@ -186,18 +185,18 @@ p {
   font-weight: 300;
   padding: 17px;
 }
-.bold-link{
+.bold-link {
   font-size: 16px;
-  font-weight:700;
+  font-weight: 700;
 }
 img {
   border-radius: 16px;
 }
-.rating{
+.rating {
   font-size: 14px;
   font-weight: 700;
 }
-.location{
+.location {
   font-size: 32px;
   font-weight: 400;
 }
@@ -210,11 +209,10 @@ footer {
   color: #fff;
   padding: 66px 15px;
   font-size: 0.7rem;
-  margin-top:30px ;
   gap: 20px;
   transition: all 300ms ease-in;
 }
-.footer-section-image{
+.footer-section-image {
   text-align: center;
 }
 footer ul {
@@ -234,43 +232,43 @@ footer ul a {
 footer ul a:visited {
   color: #fff;
 }
-footer img{
+footer img {
   margin-top: 20px;
 }
 /*================= Testimonial  ==================*/
-.testimonial{
+.testimonial {
   display: flex;
-    flex-direction: column;
-    gap: 63px;
+  flex-direction: column;
+  gap: 63px;
 }
-.testimonial h2{
+.testimonial h2 {
   text-align: center;
 }
-.testimonial-section{
+.testimonial-section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-  padding: 0 1.5vw 25px;;
+  padding: 0 1.5vw 25px;
 }
-.testimonial-section article{
-  background-color: #EE9972;
+.testimonial-section article {
+  background-color: #ee9972;
   border-radius: 16px;
   padding: 0 20px 20px;
 }
-.testimonial-title{
+.testimonial-title {
   position: relative;
   padding: 40px 0 0;
 }
-.testimonial img{
+.testimonial img {
   position: absolute;
-    top: -67px;
-    border-radius: 50%;
+  top: -67px;
+  border-radius: 50%;
 }
-.rating{
+.rating {
   display: flex;
   gap: 10px;
 }
-.stars{
+.stars {
   display: flex;
   gap: 2px;
 }
@@ -281,43 +279,43 @@ footer img{
   align-items: center;
   padding: 5%;
 }
-.discription > article{
+.discription > article {
   flex: 1 1 0px;
 }
-.discription>article>h1{
+.discription > article > h1 {
   margin-bottom: 0;
 }
-.discription>article>.location{
+.discription > article > .location {
   margin-top: 0;
 }
-.discription-image-section{
+.discription-image-section {
   position: relative;
 }
-.discription-image-section img{
+.discription-image-section img {
   width: 60%;
 }
-.discription-first-img{
+.discription-first-img {
   margin-left: 40%;
 }
-.discription-second-img{
+.discription-second-img {
   margin-top: -10em;
 }
 /*================= Burger menu  ==================*/
-.top-nav{
+.top-nav {
   position: relative;
 }
-.menu-icon{
+.menu-icon {
   display: none;
   position: relative;
   z-index: 4;
 }
-.burger-menu>span{
+.burger-menu > span {
   position: absolute;
   right: 0;
   top: 0;
   padding: 30px;
 }
-.burger-menu{
+.burger-menu {
   position: fixed;
   overflow: hidden;
   right: 0;
@@ -332,37 +330,89 @@ footer img{
   transition: all 300ms ease-in;
   z-index: 2;
 }
-.burger-menu.open{
+.burger-menu.open {
   width: 100%;
-  color: #EDEFEE;
+  color: #edefee;
   text-align: center;
 }
-.burger-menu li{
+.burger-menu li {
   padding: 20px;
 }
-.burger-menu a{
-  color: #EDEFEE;
+.burger-menu a {
+  color: #edefee;
   text-decoration: none;
 }
-.burger-menu a:visited{
-  color: #EDEFEE;
+.burger-menu a:visited {
+  color: #edefee;
 }
-.white{
-  color: #EDEFEE;
+.white {
+  color: #edefee;
 }
+/*================= Reservation  ==================*/
+.reservation-section-one {
+  padding: 35px;
+  display: flex;
+  justify-content: center;
+}
+.reservation-main {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.reservation-main h2 {
+  text-align: center;
+}
+.reservation-baner {
+  max-width: 70%;
+  height: 100%;
+  border-radius: 0;
+}
+.reservation-main .section-form {
+  padding: 10%;
+}
+.reservation-main .section-form input[type="text"],
+.reservation-main .section-form input[type="date"],
+.reservation-main .section-form input[type="number"],
+.reservation-main .section-form input[type="datetime-local"],
+.reservation-main .section-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 16px;
+  margin: 5px 0 0 0;
+  box-sizing: border-box;
+  height: 50px;
+}
+.reservation-main .section-form button{
+  width: 100%;
+  color: #edefee;
+  background-color: #495e57;
+  height: 53px;
+  border-radius: 16px;
 
+}
+.form-field{
+  height: 87px;
+  margin-bottom: 15px;
+}
+.error{
+  color: #ed4337;
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
 /*================= Media  ==================*/
 @media screen and (max-width: 992px) {
   .menu-icon {
     display: inline-block;
     padding-right: 20px;
-    
   }
   .profile {
     display: none;
   }
   footer {
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: start;
   }
   footer img {
@@ -371,54 +421,54 @@ footer img{
     object-fit: cover;
     border-radius: 16px;
   }
-  .footer-section-image{
+  .footer-section-image {
     grid-column-start: span 3;
   }
   .primary-menu {
     display: none;
   }
-  .header-image img{
+  .header-image img {
     top: 0;
   }
-  .home-card-section{
+  .home-card-section {
     grid-template-columns: 1fr 1fr;
   }
-  .testimonial-section{
+  .testimonial-section {
     grid-template-columns: auto;
     gap: 90px;
   }
-  .discription{
+  .discription {
     flex-direction: column;
-    margin: 0;
+    margin: 0 0 50px 0;
   }
 }
 @media screen and (max-width: 768px) {
-  .home-header{
+  .home-header {
     grid-template-columns: 1fr;
   }
-  .header-image{
+  .header-image {
     display: none;
   }
-  .header-text{
+  .header-text {
     width: 100%;
   }
-  .home-section-one{
+  .home-section-one {
     padding-top: 50px;
   }
-  .home-card-section{
+  .home-card-section {
     grid-template-columns: 1fr;
     padding: 0 20px 20px;
   }
-  footer{
+  footer {
     grid-template-columns: 1fr;
   }
-  footer img{
+  footer img {
     height: 250px;
   }
-  footer section{
+  footer section {
     text-align: center;
   }
-  .footer-section-image{
+  .footer-section-image {
     grid-column-start: 1;
   }
 }

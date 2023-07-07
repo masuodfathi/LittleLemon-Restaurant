@@ -8,7 +8,6 @@ export const Footer = () => {
       <section className="footer-section-image">
         <img src={FooterLogo} alt="" />
       </section>
-      
       <section>
         <h3 className="footer-header">Doormate navigation</h3>
         <ul>

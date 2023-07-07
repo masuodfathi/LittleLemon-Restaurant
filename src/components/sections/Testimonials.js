@@ -249,7 +249,6 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                 </svg>
               </span>
               </div>
-              
             </div>
             <p className="comment">
               lobortis eros sit amet, feugiat eros. Aliquam et sem at ante
@@ -258,7 +257,6 @@ export const Testimonials = ({ title = "Testimonial" }) => {
               ut mi
             </p>
           </article>
-          
         </section>
       </section>
     </>
