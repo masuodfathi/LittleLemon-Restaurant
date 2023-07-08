@@ -371,7 +371,7 @@ footer img {
 .reservation-main .section-form {
   padding: 10%;
 }
-.reservation-main .section-form input[type="text"],
+/* .reservation-main .section-form input[type="text"],
 .reservation-main .section-form input[type="date"],
 .reservation-main .section-form input[type="number"],
 .reservation-main .section-form input[type="datetime-local"],
@@ -383,7 +383,7 @@ footer img {
   margin: 5px 0 0 0;
   box-sizing: border-box;
   height: 50px;
-}
+} */
 .reservation-main .section-form button{
   width: 100%;
   color: #edefee;
@@ -393,14 +393,24 @@ footer img {
 
 }
 .form-field{
-  height: 87px;
+  
   margin-bottom: 15px;
 }
 .error{
-  color: #ed4337;
-  margin: 0 0 15px 0;
-  font-size: 16px;
-  font-weight: 500;
+  color: #fb1c1c;
+  margin: .25rem 0 15px 0;
+  font-size: 12px;
+  
+}
+.seatoption{
+  margin: 10px 10px 0 0
+}
+#occasion option{
+  padding: 10px;
+}
+form div.form-field input.inputerror{
+  border: 1px solid #fb1c1c !important;
+  background-color: #ffdcdc;
 }
 /*================= Media  ==================*/
 @media screen and (max-width: 992px) {

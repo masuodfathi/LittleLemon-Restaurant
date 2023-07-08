@@ -1,49 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { useFormik } from "formik";
+import { Formik,Form, Field } from "formik";
+import { Textbox } from "../layout/Textbox";
 import * as Yup from "yup";
+import Select from "../layout/Select";
+import { Radio } from "../layout/Radio";
+import { TextField } from "@mui/material";
 
-// const validate = values => {
-//     const errors = {};
-//     if (!values.date) {
-//       errors.date = 'Required';
-//     } else if (values.date < Date.now) {
-//       errors.date = 'You should select an available date';
-//     }
-
-//     if (!values.number) {
-//       errors.number = 'Required';
-//     } else if (values.number > 10) {
-//       errors.number = 'We can manage under 10 person';
-//     }
-
-//     if (!values.occasion) {
-//       errors.occasion = 'Required';
-//     }
-//     return errors;
-//   };
 const today = new Date();
 
 const ReservationForm = () => {
-    const minDateyear = today.getFullYear();
-    const minDateMonth = String(today.getMonth()+1).padStart(2,"0");
-    const minDateDay = String(today.getDate()).padStart(2,"0");
-    const curruntTime = + today.getHours() + ":"  + String(today.getMinutes()).padStart(2,"0");;
-    const [min, setMin] = useState(minDateyear + "-" + minDateMonth + "-" + minDateDay);
-  
+  const minDateyear = today.getFullYear();
+  const minDateMonth = String(today.getMonth() + 1).padStart(2, "0");
+  const minDateDay = String(today.getDate()).padStart(2, "0");
+  // const curruntTime =
+  //   +today.getHours() + ":" + String(today.getMinutes()).padStart(2, "0");
+  const [min, setMin] = useState(
+    minDateyear + "-" + minDateMonth + "-" + minDateDay
+  );
+
   useEffect(() => {
     setMin(() => {
       return minDateyear + "-" + minDateMonth + "-" + minDateDay;
     });
-  }, [minDateDay,minDateyear,minDateMonth]);
+  }, [minDateDay, minDateyear, minDateMonth]);
 
-  const formik = useFormik({
-    initialValues: {
-      date:"",
-      number: "",
-      occasion: "",
-      seat: "",
-    },
-    validationSchema: Yup.object({
+  return (
+    <Formik
+    initialValues={{ date: "", number: "", occasion: "", seat: "" }}
+    validationSchema={Yup.object({
       date: Yup.date()
         .min(min, "should select a valide date")
         .required("Required"),
@@ -51,62 +35,67 @@ const ReservationForm = () => {
         .max(10, "Must be 10 people or less")
         .required("Required"),
       occasion: Yup.string().required("Required"),
-    }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-
-  return (
-    <form onSubmit={formik.handleSubmit}>
+      seat:Yup.string().required("Required")
+    })}
+    onSubmit={async(values) => {
+      await alert(JSON.stringify(values, null, 2));
+    }}>
+      
+    <Form>
       <div className="form-field">
-        <label htmlFor="date">Date: </label>
-        <input
+        <Textbox
+          label="Date"
           id="date"
           name="date"
           type="datetime-local"
-          min={min+'T'+curruntTime}
-          value={formik.values.date}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        //   {...formik.getFieldProps("date")}
+          min={min + "T00:00"}
+          fullWidth
+          variant="standard"
         />
-        {formik.touched.date && formik.errors.date ? (
-          <p className="error">{formik.errors.date}</p>
-        ) : null}
       </div>
       <div className="form-field">
-        <label htmlFor="number">Number of dinners: </label>
-        <input
+        <Textbox
+          label="Number"
           id="number"
           name="number"
           type="number"
-          {...formik.getFieldProps("number")}
+          placeholder="input number of dinners"
+          variant="standard"
+          fullWidth
         />
-        {formik.touched.number && formik.errors.number ? (
-          <p className="error">{formik.errors.number}</p>
-        ) : null}
       </div>
       <div className="form-field">
-        <label htmlFor="occasion">Occasion: </label>
-        <select
-          id="occasion"
-          name="occasion"
-          {...formik.getFieldProps("occasion")}
-        >
-          <option value="" disabled hidden>
-            Choose an occasion
-          </option>
-          <option value="birthday">Birthday</option>
-          <option value="anniversary">Anniversary</option>
-          <option value="engagement">Engagement</option>
-        </select>
-        {formik.touched.occasion && formik.errors.occasion ? (
-          <p className="error">{formik.errors.occasion}</p>
-        ) : null}
+        <Select label="Occasion" name="occasion" type="select" id="occasion">
+          <option value="" disabled hidden>Select an occasion</option>
+          <option value="designer">Birthday</option>
+          <option value="development">Anniversary</option>
+          <option value="product">Engagement</option>
+          <option value="other">Other</option>
+        </Select>
       </div>
-      <button type="submit" className="button">Reserve</button>
-    </form>
+      <div className="form-field">
+        <span className="seatoption">Seat option: </span>
+      <Textbox
+          label="inside"
+          id="inside"
+          name="seat"
+          type="radio"
+          value="inside"
+          
+        />
+        <Textbox
+          label="outside"
+          id="outside"
+          name="seat"
+          type="radio"
+          value="outside"
+        />
+      </div>
+      <button type="submit" className="button">
+        Reserve
+      </button>
+    </Form>
+    </Formik>
   );
 };
 
