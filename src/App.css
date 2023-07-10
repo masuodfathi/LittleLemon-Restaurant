@@ -384,7 +384,7 @@ footer img {
   box-sizing: border-box;
   height: 50px;
 } */
-.reservation-main .section-form button{
+.reservation-main .section-form button.reserv-button{
   width: 100%;
   color: #edefee;
   background-color: #495e57;
@@ -396,11 +396,14 @@ footer img {
   
   margin-bottom: 15px;
 }
-.error{
-  color: #fb1c1c;
+.error , p.error{
+  color: #d32f2f;
   margin: .25rem 0 15px 0;
-  font-size: 12px;
-  
+  font-size: .75rem;
+}
+label.error{
+  font-size: 1rem;
+  color: #d32f2f;
 }
 .seatoption{
   margin: 10px 10px 0 0
@@ -411,6 +414,17 @@ footer img {
 form div.form-field input.inputerror{
   border: 1px solid #fb1c1c !important;
   background-color: #ffdcdc;
+}
+.reservation-form{
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+.occasion-select{
+  width: 100%;
+}
+.reservation-datetime{
+  width: 100%;
 }
 /*================= Media  ==================*/
 @media screen and (max-width: 992px) {
