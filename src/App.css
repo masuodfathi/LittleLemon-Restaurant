@@ -349,6 +349,23 @@ footer img {
   color: #edefee;
 }
 /*================= Reservation  ==================*/
+.reservationform input, .reservationform select{
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 10px;
+}
+.reservationform input[type='submit']{
+  background-color: #495e57;
+  color: #edefee;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 35px;
+  box-shadow: 0 0 20px 0 rgba(73, 94, 87,.4);
+  margin-top: 30px;
+}
 .reservation-section-one {
   padding: 35px;
   display: flex;

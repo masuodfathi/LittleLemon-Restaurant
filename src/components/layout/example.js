@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { Button } from "@mui/material";
 import {
-  TextField,
   RadioGroup,
   FormControlLabel,
   FormLabel,
@@ -14,24 +13,13 @@ import {
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-import { DateTimePicker } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { MyDatePicker } from "./MyDatePicker";
 import { MyNumbetTextBox } from "./MyNumbetTextBox";
 
 const WithMaterialUI = () => {
-  const today = new Date();
-  const minDateyear = today.getFullYear();
-  const minDateMonth = String(today.getMonth() + 1).padStart(2, "0");
-  const minDateDay = String(today.getDate()).padStart(2, "0");
-  const [min, setMin] = useState(
-    minDateyear + "-" + minDateMonth + "-" + minDateDay
-  );
   const validationSchema = yup.object({
     date: yup
       .date()
-      .min(min, "should select a valide date")
       .required("Required"),
     number: yup.string("Enter your number").required("Password is required"),
     occasion: yup.string().required("Requierd"),

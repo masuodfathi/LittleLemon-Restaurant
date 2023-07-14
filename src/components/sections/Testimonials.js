@@ -23,7 +23,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -36,7 +36,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -49,7 +49,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -62,7 +62,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -75,7 +75,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -106,7 +106,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -119,7 +119,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -132,7 +132,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -145,7 +145,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -158,7 +158,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -189,7 +189,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -202,7 +202,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -215,7 +215,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -228,7 +228,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -241,7 +241,7 @@ export const Testimonials = ({ title = "Testimonial" }) => {
                   width="16"
                   height="16"
                   fill="#f4ce14"
-                  classNames="bi bi-star-fill"
+                  
                   viewBox="0 0 16 16"
                 >
                   {" "}
