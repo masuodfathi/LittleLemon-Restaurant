@@ -7,7 +7,7 @@ import BookingForm from "../layout/BookingForm";
 
 
 
-export const Reservation = ({availableTimes,setAvailableTimes}) => {
+export const Reservation = ({availableTimes,setAvailableTimes,submitForm }) => {
   return (
     <>
       <main className="reservation-main">
@@ -19,7 +19,7 @@ export const Reservation = ({availableTimes,setAvailableTimes}) => {
           {/* <ReservationForm/> */}
           {/* <MymaterialSelect/> */}
             {/* <WithMaterialUI /> */}
-            <BookingForm availableTimes={availableTimes} setAvailableTimes={setAvailableTimes}/>
+            <BookingForm availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} submitForm={submitForm}/>
         </section>
       </main>
     </>

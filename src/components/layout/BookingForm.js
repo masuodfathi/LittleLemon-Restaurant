@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 
-export const BookingForm = ({ availableTimes }) => {
+export const BookingForm = ({ availableTimes,submitForm}) => {
   const [date, setDate] = useState("");
   const [times, setTime] = useState("");
   const [number, setNumber] = useState("");
   const [occasion, setOccasion] = useState("");
 
-  const print = () => {
-    console.log(availableTimes);
-  };
-
-  const submitForm = (e) => {
+  const submitForm1 = (e) => {
     const values = {
       date: date,
       time: times,
@@ -18,13 +14,16 @@ export const BookingForm = ({ availableTimes }) => {
       occasion: occasion,
     };
     e.preventDefault();
-    alert(JSON.stringify(values, null, 2));
+    if (date && times && number && occasion) {
+      submitForm(values);
+      // alert(JSON.stringify(values, null, 2));
+    }
   };
   return (
     <>
       <form
         style={{ display: "grid", maxWidth: "200 px" }}
-        onSubmit={submitForm}
+        onSubmit={()=>submitForm1()}
         className="reservationform"
       >
         <label htmlFor="res-date">Choose date</label>
@@ -33,6 +32,7 @@ export const BookingForm = ({ availableTimes }) => {
           id="res-date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
+          name="date"
         />
         <label htmlFor="res-time" id="rest-time-label">
           Choose time
@@ -42,7 +42,6 @@ export const BookingForm = ({ availableTimes }) => {
           id="res-time"
           value={times}
           onChange={(e) => setTime(e.target.value)}
-          onClick={print}
           name="time"
           aria-labelledby="rest-time-label"
         >
@@ -50,7 +49,7 @@ export const BookingForm = ({ availableTimes }) => {
             Select reservation time
           </option>
           {availableTimes?.map((option) => (
-            <option key={option.time}>{option.time}</option>
+             <option key={option.time} name="option">{option.time}</option>
           ))}
           
         </select>
@@ -82,7 +81,7 @@ export const BookingForm = ({ availableTimes }) => {
           <option value="Anniversary">Anniversary</option>
           <option value="Engagement">Engagement</option>
         </select>
-        <input type="submit" value="Make Your reservation" />
+        <input type="submit" value="Make Your reservation" onClick={submitForm1}/>
       </form>
     </>
   );

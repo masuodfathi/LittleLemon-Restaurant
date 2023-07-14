@@ -443,6 +443,19 @@ form div.form-field input.inputerror{
 .reservation-datetime{
   width: 100%;
 }
+option{
+  padding: 10px 0   ;
+}
+/*================= confirmform  ==================*/
+.confirmform{
+  border: 1px solid #495e57;
+  background-color: #edefee;
+  border-radius: 35px;
+  width: fit-content;
+  margin: 50px auto ;
+  padding: 35px;
+}
+
 /*================= Media  ==================*/
 @media screen and (max-width: 992px) {
   .menu-icon {
