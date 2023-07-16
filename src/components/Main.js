@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { Navigate, Routes } from "react-router";
+import { Routes } from "react-router";
 import { Route } from "react-router";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
@@ -10,7 +10,7 @@ import { OrderOnline } from "./pages/OrderOnline";
 import { ConfirmedBooking } from "./pages/ConfirmedBooking ";
 import { useNavigate } from "react-router-dom";
 
-const updateTime = () => {
+export const updateTime = () => {
   return [
     { time: "9:00" },
     { time: "10:00" },
@@ -34,19 +34,7 @@ export const initializeTimes = [
   { time: "19:00" },
   { time: "20:00" },
 ];
-async function logMovies() {
-  try {
-    const response = await fetch("http://example.com/movies.json");
-    if (!response.ok) {
-      throw new Error("Network response was not OK");
-    }
-    const movies = await response.json();
-    console.log(movies);
-  }catch(error)
-  {
-    console.error("There has been a problem :", error);
-  }
-}
+
 export const Main = () => {
   const [formData, setFormData] = useState({});
   const [availableTimes, setAvailableTimes] = useReducer(
@@ -71,8 +59,8 @@ export const Main = () => {
       return false;
     }
   };
+
   useEffect(() => {
-    logMovies();
     console.log("UseEffect: " + formData.date);
     if (hasValue(formData)) {
       submitForm(formData);

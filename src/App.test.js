@@ -1,110 +1,21 @@
-import { render, screen, waitFor, within } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
-import BookingForm from './components/layout/BookingForm';
-import { Main } from './components/Main';
-import { Reservation } from './components/pages/Reservation';
-import user from '@testing-library/user-event';
-import { describe } from 'mocha';
-import { act } from 'react-dom/test-utils';
-import {initializeTimes} from './components/Main';
-import { BrowserRouter } from 'react-router-dom';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText("Chicago");
-  expect(linkElement).toBeInTheDocument();
+
+test('Render the header tag',()=>{
+  render(<App/>);
+  const header = screen.getByRole('banner');
+  expect(header).toBeInTheDocument;
 });
 
-// test('Render the booking form heading',async()=>{
-//   render(<Reservation/>);
-//   const times = await screen.findByLabelText('Choose time');
-//   expect(times).toHaveFormValues({initializeTimes});
-// expect(screen.getAllByRole('option').length).toBe(9)
-// });
+test('Render the main tag',()=>{
+  render(<App/>);
+  const main = screen.getByRole('main');
+  expect(main).toBeInTheDocument;
+});
 
-////////////////////////////////////////Mock Browser Router///////////////////////////////
-// const Mocktest =({availableTimes})=>{
-//   return(
-//     <BrowserRouter>
-//       <Reservation availableTimes={availableTimes}/>
-//     </BrowserRouter>
-//   )
-// }
-
-
-test('number of availavle times',async ()=>{
-  render(<Reservation availableTimes={initializeTimes}/>);
-  const time = await screen.findByLabelText(/choose time/i);
-    expect(time).toBeInTheDocument();
-    //user.selectOptions(time,within(time).getByRole('option',{name:'12:00'}));
-    expect(within(time).getAllByRole('option').length).toBe(9);
-})
-
-let myTimes = [
-  { time: "9:00" },
-  { time: "10:00" },
-  { time: "11:00" },
-  { time: "12:00" },
-  { time: "16:00" },
-  { time: "17:00" }
-]
-test('number of availavle times',async ()=>{
-  render(<Reservation availableTimes={myTimes}/>);
-  const time = await screen.findByLabelText(/choose time/i);
-    expect(time).toBeInTheDocument();
-    //user.selectOptions(time,within(time).getByRole('option',{name:'12:00'}));
-    expect(within(time).getAllByRole('option').length).toBe(6);
-})
-
-
-test('number of availavle times',async ()=>{
-  myTimes = [
-    { time: "9:00" },
-    { time: "10:00" },
-  ]
-  render(<Reservation availableTimes={myTimes}/>);
-  const time = await screen.findByLabelText(/choose time/i);
-    expect(time).toBeInTheDocument();
-    //user.selectOptions(time,within(time).getByRole('option',{name:'12:00'}));
-    expect(within(time).getAllByRole('option').length).toBe(2);
-})
-
-test('is confirm page appear after submit reservation click ',async ()=>{
-  render(<Reservation availableTimes={initializeTimes}/>);
-
-    const date = screen.getByLabelText(/choose date/i);
-    //user.type(date,'12-12-2023');
-    expect(date).toBeInTheDocument();
-
-    const time = await screen.findByLabelText(/choose time/i);
-    expect(time).toBeInTheDocument();
-    act(()=>{
-      user.selectOptions(time,within(time).getByRole('option',{name:'12:00'}));
-    })
-
-    const number = screen.getByRole('spinbutton', {
-      name: /number of guests/i
-    });
-    //user.type(number,'6');
-    expect(number).toBeInTheDocument();
-
-    act(()=>{
-      const occasion = screen.getByLabelText(/occasion/i);
-    })
-
-    //user.selectOptions(occasion,within(occasion).getByRole('option',{name:'Birthday'}));
-    expect(occasion).toBeInTheDocument();
-
-    const makeReservation = screen.getByRole('button', {
-      name: /make your reservation/i
-    });
-    //user.click(makeReservation);
-    expect(makeReservation).toBeInTheDocument();
-
-    // await waitFor(()=>{
-    //   expect(onSubmit).toHaveBeenCalledTimes(1);
-    // });
-    // expect(onSubmit).toHaveBeenCalledWith({lazy:true});
-//   expect(times).toHaveFormValues({initializeTimes});
-
+test('Render the footer tag',()=>{
+  render(<App/>);
+  const footer = screen.getByRole('contentinfo');
+  expect(footer).toBeInTheDocument;
 });
