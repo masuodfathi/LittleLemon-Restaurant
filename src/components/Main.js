@@ -34,7 +34,19 @@ export const initializeTimes = [
   { time: "19:00" },
   { time: "20:00" },
 ];
-
+async function logMovies() {
+  try {
+    const response = await fetch("http://example.com/movies.json");
+    if (!response.ok) {
+      throw new Error("Network response was not OK");
+    }
+    const movies = await response.json();
+    console.log(movies);
+  }catch(error)
+  {
+    console.error("There has been a problem :", error);
+  }
+}
 export const Main = () => {
   const [formData, setFormData] = useState({});
   const [availableTimes, setAvailableTimes] = useReducer(
@@ -60,6 +72,7 @@ export const Main = () => {
     }
   };
   useEffect(() => {
+    logMovies();
     console.log("UseEffect: " + formData.date);
     if (hasValue(formData)) {
       submitForm(formData);
