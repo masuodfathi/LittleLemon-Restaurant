@@ -351,6 +351,10 @@ footer img {
   color: #edefee;
 }
 /*================= Reservation  ==================*/
+.reservationform{
+  display: grid;
+  max-width: 100%;
+}
 .reservationform input, .reservationform select{
   padding: 15px;
   margin: 5px 0 20px 0;
@@ -358,7 +362,11 @@ footer img {
   border: none;
   border-radius: 10px;
 }
+.reservationform input:invalid{
+  border: 1px solid #d32f2f;
+}
 .reservationform input[type='submit']{
+  cursor: pointer;
   background-color: #495e57;
   color: #edefee;
   font-weight: 500;
@@ -367,6 +375,10 @@ footer img {
   border-radius: 35px;
   box-shadow: 0 0 20px 0 rgba(73, 94, 87,.4);
   margin-top: 30px;
+}
+.reservationform input[type='submit']:disabled{
+  background-color: #9e9e9e;
+  color: #565656;
 }
 .reservation-section-one {
   padding: 35px;
