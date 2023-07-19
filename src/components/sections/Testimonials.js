@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Stars } from "../layout/Stars";
+import Loading from "../layout/testimonialsLoading";
 
 export const Testimonials = ({ title = "Testimonial" }) => {
   const [users, setUsers] = useState();
 
-
   useEffect(() => {
-      fetch(`https://randomuser.me/api/?results=${3}`)
-        .then((response) => response.json())
-        .then((json) => json)
-        .then((j) => {
-          console.log(j);
-          setUsers(j.results);
-        })
-        .catch((err) => {
-          console.log("Fetch is failed");
-          console.log(err);
-        });
+    fetch(`https://randomuser.me/api/?results=${3}`)
+      .then((response) => response.json())
+      .then((json) => json)
+      .then((j) => {
+        console.log(j);
+        setUsers(j.results);
+      })
+      .catch((err) => {
+        console.log("Fetch is failed");
+        console.log(err);
+      });
   }, []);
 
   return (
@@ -24,30 +24,37 @@ export const Testimonials = ({ title = "Testimonial" }) => {
       <section className="testimonial">
         <h2>{title}</h2>
         <section className="testimonial-section">
-          {users?.map((person) => {
-            return (
-              <article key={person.name.first}>
-                <div className="flex flex-col align-center testimonial-title">
-                  <img src={person.picture.large} alt="" width="125" />
-                  <h4 className="center">
-                    {person.name.first} {person.name.last}
-                  </h4>
-                </div>
-                <div className="rating">
-                  <span>Rating: </span>
-                  <div className="stars">
-                    <Stars count={Math.floor(Math.random() * 5) + 1} />
-                  </div>
-                </div>
-                <p className="comment">
-                  lobortis eros sit amet, feugiat eros. Aliquam et sem at ante
-                  sollicitudin varius aliquam ut nunc. Nam tincidunt, tellus ut
-                  vehicula iaculis, elit nunc sagittis nulla, ut volutpat eros
-                  nisi ut mi
-                </p>
-              </article>
-            );
-          })}
+          {users ? (
+            users.map((person) => {
+              return (
+                <>
+                
+                  <article key={person.name.first}>
+                    <div className="flex flex-col align-center testimonial-title">
+                      <img src={person.picture.large} alt="" width="125" />
+                      <h4 className="center">
+                        {person.name.first} {person.name.last}
+                      </h4>
+                    </div>
+                    <div className="rating">
+                      <span>Rating: </span>
+                      <div className="stars">
+                        <Stars count={Math.floor(Math.random() * 5) + 1} />
+                      </div>
+                    </div>
+                    <p className="comment">
+                      lobortis eros sit amet, feugiat eros. Aliquam et sem at
+                      ante sollicitudin varius aliquam ut nunc. Nam tincidunt,
+                      tellus ut vehicula iaculis, elit nunc sagittis nulla, ut
+                      volutpat eros nisi ut mi
+                    </p>
+                  </article>
+                </>
+              );
+            })
+          ) : (
+            <Loading />
+          )}
           {/* <article>
             <div className="flex flex-col align-center testimonial-title">
               <img src={P1} alt="" width="125" />
