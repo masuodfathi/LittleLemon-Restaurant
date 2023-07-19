@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import FooterLogo from "../assets/Footerlogo.png";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TelegramIcon from '@mui/icons-material/Telegram';
 
 export const Footer = () => {
   return (
@@ -42,9 +46,10 @@ export const Footer = () => {
       <section>
         <h3 className="footer-header">Social media</h3>
       <ul>
-        <li className="menu">FaceBook</li>
-        <li className="menu">Instagram</li>
-        <li className="menu">Telegram</li>
+        <li className="menu"><FacebookIcon/>FaceBook</li>
+        <li className="menu"><InstagramIcon/><a href="https://www.instagram.com/masuod.fathi?r=nametag">Instagram</a></li>
+        <li className="menu"><TelegramIcon/>Telegram</li>
+        <li className="menu"><LinkedInIcon/><a href="https://www.linkedin.com/in/masoud-fathi-3b4452176/">Linkedin</a></li>
       </ul>
       </section>
     </footer>
