@@ -228,6 +228,9 @@ footer section h3 {
 footer ul a {
   text-decoration: none;
   color: #fff;
+  display: flex;
+  align-items: end;
+  gap: 5px;
 }
 footer ul a:visited {
   color: #fff;
@@ -235,6 +238,23 @@ footer ul a:visited {
 footer img {
   margin-top: 20px;
 }
+#instagram,.instagram{
+  color: #C13584;
+
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#telegram{
+  color:#229ED9;
+}
+#linkedin{
+  color: #0075b5;
+  background-color: #fff;
+}
+
 /*================= Testimonial  ==================*/
 .testimonial {
   display: flex;

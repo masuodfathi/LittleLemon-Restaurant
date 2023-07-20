@@ -46,10 +46,10 @@ export const Footer = () => {
       <section>
         <h3 className="footer-header">Social media</h3>
       <ul>
-        <li className="menu"><FacebookIcon/>FaceBook</li>
-        <li className="menu"><InstagramIcon/><a href="https://www.instagram.com/masuod.fathi?r=nametag">Instagram</a></li>
-        <li className="menu"><TelegramIcon/>Telegram</li>
-        <li className="menu"><LinkedInIcon/><a href="https://www.linkedin.com/in/masoud-fathi-3b4452176/">Linkedin</a></li>
+        <li className="menu"><a href=""><FacebookIcon/>FaceBook</a></li>
+        <li className="menu"><a href="https://www.instagram.com/masuod.fathi?r=nametag"><InstagramIcon/>Instagram</a></li>
+        <li className="menu"><a href="" ><TelegramIcon/>Telegram</a></li>
+        <li className="menu"><a href="https://www.linkedin.com/in/masoud-fathi-3b4452176/"><LinkedInIcon/>Linkedin</a></li>
       </ul>
       </section>
     </footer>
